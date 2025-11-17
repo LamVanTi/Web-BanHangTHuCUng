@@ -1,0 +1,137 @@
+<?php
+session_start();
+include '../backend/api/database.php'; // đường dẫn tùy project bạn
+?>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập - PetSupply 🐾</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #cce7ff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* Hiệu ứng background động */
+    .bg-paw {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .bg-paw i {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 30px;
+        animation: pawMove 10s linear infinite;
+        bottom: -100px;
+    }
+
+    .bg-paw i:nth-child(1){ left: 10%; font-size: 50px; animation-delay: 0s; }
+    .bg-paw i:nth-child(2){ left: 25%; font-size: 30px; animation-delay: 5s; }
+    .bg-paw i:nth-child(3){ left: 40%; font-size: 60px; animation-delay: 2s; animation-duration: 20s; }
+    .bg-paw i:nth-child(4){ left: 55%; font-size: 45px; animation-delay: 8s; }
+    .bg-paw i:nth-child(5){ left: 70%; font-size: 35px; animation-delay: 3s; }
+    .bg-paw i:nth-child(6){ left: 85%; font-size: 55px; animation-delay: 6s; animation-duration: 22s; }
+    .bg-paw i:nth-child(7){ left: 15%; font-size: 40px; animation-delay: 10s; }
+    .bg-paw i:nth-child(8){ left: 50%; font-size: 25px; animation-delay: 12s; animation-duration: 35s; }
+    .bg-paw i:nth-child(9){ left: 75%; font-size: 20px; animation-delay: 16s; animation-duration: 40s; }
+    .bg-paw i:nth-child(10){ left: 90%; font-size: 65px; animation-delay: 4s; }
+
+    @keyframes pawMove {
+        0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; }
+    }
+
+
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      text-align: center;
+      width: 360px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      color: #ff66a3;
+      margin-bottom: 25px;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      background: #f2f2f2;
+      transition: all 0.3s;
+    }
+
+    input:focus {
+      outline: none;
+      box-shadow: 0 0 10px #ffb6c1;
+      background: #fff;
+    }
+
+    button {
+      background: linear-gradient(45deg, #ff80b3, #99ccff);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ffb3da;
+    }
+
+    a {
+      display: block;
+      margin-top: 15px;
+      color: #888;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    a:hover { color: #ff66a3; }
+  </style>
+</head>
+<body>
+
+  <div class="paw" style="top:10%; left:-20px; animation-delay:0s;"></div>
+  <div class="paw" style="top:40%; left:-50px; animation-delay:2s;"></div>
+  <div class="paw" style="top:70%; left:-30px; animation-delay:4s;"></div>
+
+  <div class="container">
+    <h2>🐾 Đăng nhập PetSupply</h2>
+    <form action="../backend/api/user_api.php?action=login" method="POST">
+      <input type="text" name="username" placeholder="Tên đăng nhập" required>
+      <input type="password" name="password" placeholder="Mật khẩu" required>
+      <button type="submit">Đăng nhập</button>
+    </form>
+    <a href="register.php">Chưa có tài khoản? Đăng ký ngay 💕</a>
+  </div>
+
+</body>
+</html>
