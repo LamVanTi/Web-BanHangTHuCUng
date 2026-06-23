@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $db_name = "petshop";
-$username = "app-user";
+$username = "app_user";
 $password = "App@12345";
 
 try {
