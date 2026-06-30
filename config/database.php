@@ -2,7 +2,7 @@
 $host = "localhost";
 $db_name = "petshop";
 $username = "app_user";
-$password = "App@12345";
+$password = "APP@12345";
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$db_name;charset=utf8", $username, $password);
