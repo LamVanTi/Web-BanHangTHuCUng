@@ -46,24 +46,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        <!-- Thành viên -->
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition duration-300 text-center">
-          <img src="https://i.imgur.com/4ZQZ4v4.png" class="w-28 h-28 mx-auto rounded-full shadow mb-4" alt="">
-          <h3 class="font-bold text-xl">Nguyễn Hữu Thắng</h3>
-          <p class="text-gray-600 mt-1">Backend - Tìm kiếm thông tin</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition duration-300 text-center">
-          <img src="https://i.imgur.com/4ZQZ4v4.png" class="w-28 h-28 mx-auto rounded-full shadow mb-4" alt="">
-          <h3 class="font-bold text-xl">Nguyễn Ngọc Nhứ Ý</h3>
-          <p class="text-gray-600 mt-1">UI/UX Designer - Database</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition duration-300 text-center">
-          <img src="https://i.imgur.com/4ZQZ4v4.png" class="w-28 h-28 mx-auto rounded-full shadow mb-4" alt="">
-          <h3 class="font-bold text-xl">Lâm Văn Tị</h3>
-          <p class="text-gray-600 mt-1">Team Leader - Hỗ trợ Backend</p>
-        </div>
+       
 
       </div>
     </section>
